@@ -1,5 +1,7 @@
 Project Proposal: Classification of Rice using CNN
 
+Datasource: https://www.kaggle.com/code/nmaleknasr/rice-image-classification-cnn-tensorflow
+
 Objective statement:
 To develop a deep learning-based rice image classification model using TensorFlow
 that can accurately identify and categorize different types of rice grains from 
