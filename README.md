@@ -1,4 +1,4 @@
-# Project Proposal: Classification of Rice Using CNN
+# Project: Classification of Rice Using CNN
 # Datasource
 The dataset for this project is sourced from Kaggle:
 https://www.kaggle.com/code/nmaleknasr/rice-image-classification-cnn-tensorflow
