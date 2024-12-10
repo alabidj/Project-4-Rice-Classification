@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Image Classification</title>
+</head>
+<body>
+
+    <h1>Rice Image Classification</h1>
+
+    <form id="image-form" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Classify Image</button>
+    </form>
+
+    <div id="result"></div> <!-- Area to display result -->
+
+    <!-- jQuery to handle form submission via AJAX -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#image-form').submit(function (e) {
+                e.preventDefault(); // Prevent the default form submission
+
+                var formData = new FormData(this); // Get the form data including the file
+
+                $.ajax({
+                    url: '/predict', // URL to your Flask API
+                    type: 'POST',
+                    data: formData,
+                    processData: false, // Do not process the data
+                    contentType: false, // Do not set content-type header
+                    success: function (response) {
+                        if (response.predicted_class) {
+                            $('#result').html(`
+                                <h3>Predicted Class: ${response.predicted_class}</h3>
+                                <p>Confidence: ${response.confidence}</p>
+                            `);
+                        } else {
+                            $('#result').html('<h3>Error: ' + response.error + '</h3>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(error);
+                        $('#result').html('<h3>Error: ' + error + '</h3>');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
