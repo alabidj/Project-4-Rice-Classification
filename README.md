@@ -46,12 +46,12 @@ Images were resized and normalized for faster computation and accurate predictio
 -Output Layer: Outputs probabilities for the five rice classes.
 
 # Test Models and Results
-Test Model 1
-Data Split: 50% training and 50% validation for balanced evaluation.
-Activation Functions:
-ReLU in convolutional layers for efficient training.
-Sigmoid in dense layers for simplicity.
-Epochs: Limited to 4 for faster experimentation.
+- Test Model 1
+1-Data Split: 50% training and 50% validation for balanced evaluation.
+2-Activation Functions:
+3-ReLU in convolutional layers for efficient training.
+4-Sigmoid in dense layers for simplicity.
+5- Epochs: Limited to 4 for faster experimentation.
 Input Size: 32 × 32 for reduced computational cost.
 Performance:
 Training Accuracy: 96.81%
