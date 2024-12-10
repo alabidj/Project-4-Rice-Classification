@@ -27,7 +27,7 @@ Export prediction data (e.g., class, accuracy) as a CSV file.
 Design visualizations to display insights:
 Class distribution of predictions.
 Performance metrics and trends.
-Create dashboards to summarize findings.
+Overall Summary: The 4 visualizations provide key insights into the performance and reliability of the rice classification model. The predictions-over-time chart highlights trends or shifts in prediction accuracy, indicating potential model drift or data inconsistencies. The confidence scores boxplot shows the distribution of the model's confidence levels, helping assess its reliability across predictions. The confidence-over-time scatter plot reveals how the model's confidence fluctuates over time, identifying periods of instability or improvement. Lastly, the class distribution chart underscores the imbalance in the dataset, with one class dominating, which may lead to overfitting and poor performance on minority classes. Together, these visuals emphasize the importance of monitoring model behavior, addressing class imbalance, and ensuring stable performance over time.
 
 Store Predictions in SQL:
 Design a SQL database schema to store prediction data.
